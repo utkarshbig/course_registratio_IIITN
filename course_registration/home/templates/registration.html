@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{%block content%}
+<body class="bg-white">
+    {% if messages %}
+    {{message.tags}}
+<div class="alert alert-primary" role="alert">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}  
+</div>
+{% endif %}
+
+<header class="py-8 py-md-11" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-4 fw-semi-bold mb-0">Semester Details</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    Register
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+<div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Register -->
+                <h3 class="mb-6">Details</h3>
+
+                <!-- Form Register -->
+                <form class="mb-5" method="post">
+                    {% csrf_token %}
+                    <!-- Username -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            Username : <b>{{user.username}}</b>
+                        </label>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            First Name : <b>{{user.first_name}}</b>
+                        </label>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            Last Name : <b>{{user.last_name}}</b>
+                        </label>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupEmail1">
+                            Year
+                        </label>
+                        <input type="integer" class="form-control" name="year" value="" id="modalSignupEmail1" placeholder="1,2,3 or 4">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="modalSignupPassword3">
+                           Semester
+                        </label>
+                        <input type="integer" class="form-control" name="semester" value=""  id="modalSignupPassword3" placeholder="1,2,3,4,5,6,7 or 8">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="modalSignupEmail1">
+                            Branch
+                        </label>
+                        <input type="integer" class="form-control" name="branch" value="" id="modalSignupEmail1" placeholder="1,2,3 or 4">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="modalSignupPassword3">
+                           Roll Number
+                        </label>
+                        <input type="text" class="form-control" name="roll" value=""  id="modalSignupPassword3" placeholder="1,2,3,4,5,6,7 or 8">
+                    </div>
+                    <!-- Password -->
+                    <!-- Submit -->
+                    <button class="btn btn-block btn-primary" type="submit">
+                        SUBMIT
+                    </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 font-size-sm text-center">
+                    Already have an account? <a class="text-underline" href="/">Log In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}

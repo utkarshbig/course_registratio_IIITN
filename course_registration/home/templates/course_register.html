@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{%block content%}
+<body class="bg-white">
+    {% if messages %}
+    {{message.tags}}
+<div class="alert alert-primary" role="alert">
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}  
+</div>
+{% endif %}
+<header class="py-8 py-md-10" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-4 fw-semi-bold mb-0">Course Register</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    Course Register
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+<div class="container pb-6 pb-xl-20">
+    <form name="checkout"  class="checkout woocommerce-checkout" action='/review' enctype="multipart/form-data">
+{% csrf_token %}
+        <div class="col2-set" id="customer_details">
+            <div class="col-1">
+                <div class="woocommerce-billing-fields">
+                    <h3> Details</h3>
+                    <div class="woocommerce-billing-fields__field-wrapper">
+                        <p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field" id="billing_first_name_field" data-priority="10">
+                            <label for="billing_first_name" class="">First name :<b> {{user.first_name}}</b><abbr class="required" title="required"></abbr></label>
+                           
+                        </p>
+                        <p class="form-row form-row-last validate-required" id="billing_last_name_field" data-priority="20">
+                            <label for="billing_last_name" class="">Last name :<b> {{user.last_name}}</b><abbr class="required" title="required"></abbr></label>
+                           
+                        </p>
+
+                        <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
+                            <label for="billing_company" class="">Roll Number : <b>{{r}}</b>
+                            </label>
+                        </p>
+                        <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
+                            <label for="billing_company" class="">Semester : <b>{{sem}}</b>
+                            </label>
+                        </p>
+                        <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
+                            <label for="billing_company" class="">Year : <b>{{year}}</b>
+                            </label>
+                        </p>
+                        <h4>Subjects Details</h4>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>A</b> <abbr class="required" title="required"></abbr></label>
+                            
+                            <select id="billing_country" name="slotA"  class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q1%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                            </select>
+                            {% endfor %}
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>B</b> <abbr class="required" title="required"></abbr></label>
+                           
+                            <select id="billing_country" name="slotB"  class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q2%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </p>
+
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>C</b> <abbr class="required" title="required"></abbr></label>
+                           
+                            <select  id="billing_country" name="slotC"  class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q3%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>D</b> <abbr class="required" title="required"></abbr></label>
+                          
+                            <select  id="billing_country" name="slotD" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q4%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>E</b> <abbr class="required" title="required"></abbr></label>
+                           
+                            <select  id="billing_country" name="slotE" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q5%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                            
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>F</b> <abbr class="required" title="required"></abbr></label>
+                           
+                            <select  id="billing_country" name="slotF" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q6%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                          
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>G</b> <abbr class="required" title="required"></abbr></label>
+                            
+                            <select  id="billing_country" name="slotG" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q7%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+                            <label for="billing_country" class="">Slot :<b>H</b> <abbr class="required" title="required"></abbr></label>
+                            
+                            <select  id="billing_country" name="slotH" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                <option value="None">None</option>
+                                {% for x in  q8%}
+                                <option value="{{x.course_name1}}">{{x.course_name1}}</option>
+                                <option value="{{x.course_name2}}">{{x.course_name2}}</option>
+                                <option value="{{x.course_name3}}">{{x.course_name3}}</option>
+                                <option value="{{x.course_name4}}">{{x.course_name4}}</option>
+                                {% endfor %}
+                            </select>
+                           
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-5">
+                <label for="modalSignupPassword3">
+                   Photograph
+                </label>
+                <input type="file"  class="form-control" name="photo1"  id="photo" placeholder="**********">
+            </div>
+
+            <div class="col-2">
+                <div class="woocommerce-shipping-fields"></div>
+                
+            </div>
+        </div>
+        <button class="btn btn-block btn-primary" type="submit">
+            SUBMIT
+        </button>
+        
+    </form>
+</div>
+
+
+{%endblock content%}

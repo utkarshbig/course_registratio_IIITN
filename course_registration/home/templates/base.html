@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {%load static%}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{%static 'assets/fonts/fontawesome/fontawesome.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+    <!-- Map -->
+    <link href='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/theme.min.css' %}">
+
+    <title>IIIT NAGPUR- {% block title %}{% endblock %}</title>
+
+    <script src="https://kit.fontawesome.com/c6780e7315.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+
+</head>
+<body>
+    <header class="navbar navbar-expand-xl navbar-light bg-white border-bottom py-2 py-xl-4">
+        <div class="container-fluid ">
+           
+            <!-- Brand -->
+            
+            <a class="navbar-brand me-0" href="/">
+                 <img src="static/assets/img/brand1.svg" class="navbar-brand-img" alt="...">
+            </a> 
+            <h2>Indian Institute of Information Technology, Nagpur</h2> 
+           
+          
+            <!-- Vertical Menu -->
+            
+
+            <!-- Search -->
+            
+
+            <!-- Collapse -->
+            
+
+            <!-- Search, Account & Cart -->
+            
+
+            <!-- Toggler -->
+            <button class="navbar-toggler ms-4 ms-md-5 shadow-none bg-teal text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Icon -->
+                <svg width="25" height="17" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="1" fill="currentColor"/>
+                    <rect y="8" width="15" height="1" fill="currentColor"/>
+                    <rect y="16" width="20" height="1" fill="currentColor"/>
+                </svg>
+
+            </button>
+        </div>
+    </header>
+{%block content%}{%endblock content%}
+
+
+<footer class="pt-8 pt-md-11 bg-light justify-content-center">
+    <div class="container">
+        <div class="row" id="accordionFooter">
+            <div class="col-12 col-md-4 col-lg-4">
+
+                <!-- Brand -->
+                <img src="static/assets/img/brand1.svg" alt="..." class="footer-brand img-fluid mb-4 h-60p">
+
+                <!-- Text -->
+                <p class="text-gray-800 mb-4 font-size-sm-alone">
+                    Survey No. 140 - 141/1, Off, Adilabad - Nagpur Rd, Waranga, Maharashtra 441108
+                </p>
+
+                <div class="mb-4">
+                    <a href="tel:1234567890" class="text-gray-800 font-size-sm-alone">094052 15010</a>
+                </div>
+
+                <div class="mb-4">
+                    <a href="mailto:support@skola.com" class="text-gray-800 font-size-sm-alone">registrar@iiitn.ac.in</a>
+                </div>
+
+                <!-- Social -->
+                <ul class="list-unstyled list-inline list-social mb-4 mb-md-0 d-flex justify-content-center">
+                    <li class="list-inline-item list-social-item">
+                        <a href="#" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2">
+                <div class="mb-5 mb-xl-0 footer-accordion">
+
+                    <!-- Heading -->
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-12 mt-md-5">
+                <div class="border-top pb-5 pt-6 py-md-4 text-center text-xl-start d-flex flex-column d-md-block d-xl-flex flex-xl-row align-items-center">
+                    <p class="text-gray-800 font-size-sm-alone d-block mb-0 mb-md-2 mb-xl-0 order-1 order-md-0 px-9 px-md-0">Copyright © 2021 CreativeLayers. All Right Reserved.
+                    </p>
+
+                    <div class="ms-xl-auto d-flex flex-column flex-md-row align-items-stretch align-items-md-center justify-content-center">
+                        <ul class="navbar-nav flex-row flex-wrap font-size-sm-alone mb-3 mb-md-0 mx-n4 me-md-5 justify-content-center justify-content-lg-start order-1 order-md-0">
+                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                <a href="index.html" class="nav-link px-4 fw-normal text-gray-800">Home</a>
+                            </li>
+                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Site Map</a>
+                            </li>
+                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Privacy policy</a>
+                            </li>
+                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Web Use Policy</a>
+                            </li>
+                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Cookie Policy</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</footer>
+
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="{%static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{%static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{%static 'assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    <script src="{%static 'assets/libs/aos/dist/aos.js' %}"></script>
+    <script src="{%static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+    <script src="{%static 'assets/libs/countup.js/dist/countUp.min.js' %}"></script>
+    <script src="{%static 'assets/libs/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{%static 'assets/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+    <script src="{%static 'assets/libs/flickity-fade/flickity-fade.js' %}"></script>
+    <script src="{%static 'assets/libs/highlightjs/highlight.pack.min.js' %}"></script>
+    <script src="{%static 'assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{%static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+    <script src="{%static 'assets/libs/jarallax/dist/jarallax.min.js' %}"></script>
+    <script src="{%static 'assets/libs/jarallax/dist/jarallax-video.min.js' %}"></script>
+    <script src="{%static 'assets/libs/jarallax/dist/jarallax-element.min.js' %}"></script>
+    <script src="{%static 'assets/libs/parallax-js/dist/parallax.min.js' %}"></script>
+    <script src="{%static 'assets/libs/quill/dist/quill.min.js' %}"></script>
+    <script src="{%static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
+    <script src="{%static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
+
+    <!-- Map -->
+    <script src='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="{%static 'assets/js/theme.min.js' %}"></script>
+
+
+</body>
+
+
+</html>
